@@ -19,6 +19,7 @@
 		08754B4C19D8088200C375A0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08754B2819D8088200C375A0 /* Cocoa.framework */; };
 		08754B5419D8088200C375A0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08754B5219D8088200C375A0 /* InfoPlist.strings */; };
 		08754B5619D8088200C375A0 /* GestionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08754B5519D8088200C375A0 /* GestionTests.m */; };
+		08754B6119D808A700C375A0 /* Employe.m in Sources */ = {isa = PBXBuildFile; fileRef = 08754B6019D808A700C375A0 /* Employe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		08754B5119D8088200C375A0 /* GestionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GestionTests-Info.plist"; sourceTree = "<group>"; };
 		08754B5319D8088200C375A0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08754B5519D8088200C375A0 /* GestionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestionTests.m; sourceTree = "<group>"; };
+		08754B5F19D808A700C375A0 /* Employe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Employe.h; path = ../Employe.h; sourceTree = "<group>"; };
+		08754B6019D808A700C375A0 /* Employe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Employe.m; path = ../Employe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 		08754B2E19D8088200C375A0 /* Gestion */ = {
 			isa = PBXGroup;
 			children = (
+				08754B5F19D808A700C375A0 /* Employe.h */,
+				08754B6019D808A700C375A0 /* Employe.m */,
 				08754B3A19D8088200C375A0 /* Document.h */,
 				08754B3B19D8088200C375A0 /* Document.m */,
 				08754B3D19D8088200C375A0 /* Document.xib */,
@@ -256,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08754B6119D808A700C375A0 /* Employe.m in Sources */,
 				08754B3C19D8088200C375A0 /* Document.m in Sources */,
 				08754B3519D8088200C375A0 /* main.m in Sources */,
 			);

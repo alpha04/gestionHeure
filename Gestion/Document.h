@@ -9,5 +9,22 @@
 #import <Cocoa/Cocoa.h>
 
 @interface Document : NSDocument
+{
+    //Tableau Employés
+    NSMutableArray *employes;
+    
+    //Calendrier
+    NSDate *currentDate;
+    
+    //Heures journalières
+    NSDate *heureMD, *heureMF, *heureAMD, *heureAMF;
+    NSDate *heuresTotalMatin;
+    NSDate *heuresTotalAMidi;
+    NSDate *heuresTotal;
+}
+- (IBAction)incrementMD:(id)sender;
+- (IBAction)incrementMF:(id)sender;
+- (IBAction)incrementAMD:(id)sender;
+- (IBAction)incrementAMF:(id)sender;
 
 @end

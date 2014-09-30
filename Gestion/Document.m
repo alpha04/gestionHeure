@@ -14,7 +14,12 @@
 {
     self = [super init];
     if (self) {
-        // Add your subclass-specific initialization here.
+        //Init Tableau Enmployés
+        employes = [[NSMutableArray alloc]init];
+        // Init Date
+        [self setValue:[NSDate date] forKey:@"currentDate"];
+        NSDate *a = [self valueForKey:@"currentDate"];
+        NSLog(@"Init date : %@",a);
     }
     return self;
 }
@@ -56,4 +61,15 @@
     return YES;
 }
 
+- (IBAction)incrementMD:(id)sender {
+}
+
+- (IBAction)incrementMF:(id)sender {
+}
+
+- (IBAction)incrementAMD:(id)sender {
+}
+
+- (IBAction)incrementAMF:(id)sender {
+}
 @end
