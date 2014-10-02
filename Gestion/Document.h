@@ -22,9 +22,18 @@
     NSDate *heuresTotalAMidi;
     NSDate *heuresTotal;
 }
+- (NSDate *)heuresTotalMatin;
+- (void)setHeuresTotalMatin;
+- (NSDate *)heuresTotalAMidi;
+- (void)setHeuresTotalAMidi;
+- (NSDate *)heuresTotal;
+- (void)setHeuresTotal;
+
+
 - (IBAction)incrementMD:(id)sender;
 - (IBAction)incrementMF:(id)sender;
 - (IBAction)incrementAMD:(id)sender;
 - (IBAction)incrementAMF:(id)sender;
+- (IBAction)enregistrer:(id)sender;
 
 @end
