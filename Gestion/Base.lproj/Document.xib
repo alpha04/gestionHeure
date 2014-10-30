@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6245"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="Document">
             <connections>
+                <outlet property="saveData" destination="aih-OD-umU" id="rC4-uh-Ezi"/>
                 <outlet property="window" destination="xOd-HO-29H" id="JIz-fz-R2o"/>
             </connections>
         </customObject>
@@ -15,7 +17,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="133" y="235" width="889" height="572"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <value key="minSize" type="size" width="94" height="86"/>
             <view key="contentView" id="gIp-Ho-8D9">
                 <rect key="frame" x="0.0" y="0.0" width="889" height="572"/>
@@ -102,7 +104,7 @@
                                                     <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
                                                 </datePickerCell>
                                                 <connections>
-                                                    <action selector="incrementAMF:" target="-2" id="4na-2g-qM5"/>
+                                                    <action selector="incrementAMF:" target="-2" id="b4H-Oc-4hK"/>
                                                     <binding destination="-2" name="value" keyPath="self.heureAMF" id="e7O-Fg-lmk"/>
                                                 </connections>
                                             </datePicker>
@@ -119,7 +121,7 @@
                                                     <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
                                                 </datePickerCell>
                                                 <connections>
-                                                    <action selector="incrementMF:" target="-2" id="j4p-xj-Lco"/>
+                                                    <action selector="incrementMF:" target="-2" id="7D9-CE-2qb"/>
                                                     <binding destination="-2" name="value" keyPath="self.heureMF" id="BmU-AR-Tjc"/>
                                                 </connections>
                                             </datePicker>
@@ -136,7 +138,7 @@
                                                     <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
                                                 </datePickerCell>
                                                 <connections>
-                                                    <action selector="incrementMD:" target="-2" id="o9p-d0-50T"/>
+                                                    <action selector="incrementMD:" target="-2" id="L6H-su-7k0"/>
                                                     <binding destination="-2" name="value" keyPath="self.heureMD" id="duc-ho-rxF"/>
                                                 </connections>
                                             </datePicker>
@@ -153,7 +155,7 @@
                                                     <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
                                                 </datePickerCell>
                                                 <connections>
-                                                    <action selector="incrementAMD:" target="-2" id="i4C-A0-lcM"/>
+                                                    <action selector="incrementAMD:" target="-2" id="xAG-4g-7fn"/>
                                                     <binding destination="-2" name="value" keyPath="self.heureAMD" id="fRQ-91-K8r"/>
                                                 </connections>
                                             </datePicker>
@@ -306,7 +308,7 @@ CA
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                     <connections>
-                                        <action selector="enregistrer:" target="-2" id="nXY-Bm-HfB"/>
+                                        <action selector="saveData:" target="-2" id="0TM-6X-3It"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -320,8 +322,7 @@ CA
                             <rect key="frame" x="1" y="17" width="238" height="117"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="O1I-mi-37J" id="Eb7-Zv-C8W">
-                                    <rect key="frame" x="0.0" y="0.0" width="238" height="117"/>
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="O1I-mi-37J" viewBased="YES" id="Eb7-Zv-C8W">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -339,6 +340,29 @@ CA
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <prototypeCellViews>
+                                                <tableCellView id="AWm-rc-gao">
+                                                    <rect key="frame" x="1" y="1" width="116" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lLV-sG-KC2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="Doc-rw-0Fj">
+                                                                <dateFormatter key="formatter" dateStyle="short" id="oBK-aK-kJw"/>
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="AWm-rc-gao" name="value" keyPath="objectValue.date" id="kaP-3T-hts"/>
+                                                            </connections>
+                                                        </textField>
+                                                    </subviews>
+                                                    <connections>
+                                                        <outlet property="textField" destination="lLV-sG-KC2" id="4Ym-45-DXg"/>
+                                                    </connections>
+                                                </tableCellView>
+                                            </prototypeCellViews>
                                         </tableColumn>
                                         <tableColumn width="116" minWidth="40" maxWidth="1000" id="GzO-M5-YAp">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Nom">
@@ -352,6 +376,28 @@ CA
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <prototypeCellViews>
+                                                <tableCellView id="bsG-qn-wA1">
+                                                    <rect key="frame" x="120" y="1" width="116" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HR7-hI-duE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="Twe-C7-OX4">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="bsG-qn-wA1" name="value" keyPath="objectValue.nom" id="7le-SJ-QBv"/>
+                                                            </connections>
+                                                        </textField>
+                                                    </subviews>
+                                                    <connections>
+                                                        <outlet property="textField" destination="HR7-hI-duE" id="4yD-Vf-dax"/>
+                                                    </connections>
+                                                </tableCellView>
+                                            </prototypeCellViews>
                                         </tableColumn>
                                         <tableColumn width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="FBp-TK-uol">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Prénom">
@@ -365,6 +411,28 @@ CA
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <prototypeCellViews>
+                                                <tableCellView id="W4K-VH-8f4">
+                                                    <rect key="frame" x="239" y="1" width="64" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vw6-xr-NqZ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="RoG-4p-PCf">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="W4K-VH-8f4" name="value" keyPath="objectValue.prenom" id="DAn-2y-Heu"/>
+                                                            </connections>
+                                                        </textField>
+                                                    </subviews>
+                                                    <connections>
+                                                        <outlet property="textField" destination="Vw6-xr-NqZ" id="fQt-wc-Foe"/>
+                                                    </connections>
+                                                </tableCellView>
+                                            </prototypeCellViews>
                                         </tableColumn>
                                         <tableColumn width="137" minWidth="10" maxWidth="3.4028234663852886e+38" id="HeZ-y2-7VU">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Heures journalières">
@@ -378,8 +446,35 @@ CA
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                            <prototypeCellViews>
+                                                <tableCellView id="Wos-ab-fd5">
+                                                    <rect key="frame" x="306" y="1" width="137" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pdT-ZQ-AX2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="hk2-rF-vYY">
+                                                                <dateFormatter key="formatter" timeStyle="short" id="dlJ-LL-3cl"/>
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="Wos-ab-fd5" name="value" keyPath="objectValue.heuresJournalieres" id="MVu-F0-5i8"/>
+                                                            </connections>
+                                                        </textField>
+                                                    </subviews>
+                                                    <connections>
+                                                        <outlet property="textField" destination="pdT-ZQ-AX2" id="Ccu-im-2ch"/>
+                                                    </connections>
+                                                </tableCellView>
+                                            </prototypeCellViews>
                                         </tableColumn>
                                     </tableColumns>
+                                    <connections>
+                                        <binding destination="ozV-wi-50e" name="content" keyPath="arrangedObjects" id="NZl-SB-bjG"/>
+                                        <binding destination="ozV-wi-50e" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="NZl-SB-bjG" id="bXC-d5-8dK"/>
+                                    </connections>
                                 </tableView>
                             </subviews>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -388,7 +483,7 @@ CA
                             <rect key="frame" x="1" y="119" width="223" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="X3f-Ht-bho">
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="X3f-Ht-bho">
                             <rect key="frame" x="224" y="17" width="15" height="102"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
@@ -397,14 +492,70 @@ CA
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VNP-lg-VnN">
+                        <rect key="frame" x="126" y="70" width="64" height="32"/>
+                        <buttonCell key="cell" type="push" title="add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ibz-UW-BLL">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="add:" target="ozV-wi-50e" id="VHB-1k-wl8"/>
+                        </connections>
+                    </button>
+                    <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QPK-BT-giJ">
+                        <rect key="frame" x="501" y="247" width="99" height="26"/>
+                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Employé" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="TLJ-cH-9as">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <binding destination="eTJ-ds-HMN" name="contentValues" keyPath="arrangedObjects" id="RFE-Sf-20p"/>
+                            </connections>
+                        </comboBoxCell>
+                        <connections>
+                            <binding destination="eTJ-ds-HMN" name="contentValues" keyPath="arrangedObjects.nom" id="F8Q-Oc-1xB"/>
+                        </connections>
+                    </comboBox>
+                    <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKp-fu-t9W">
+                        <rect key="frame" x="620" y="247" width="99" height="26"/>
+                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="tlW-qR-t3E">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <objectValues>
+                                <string>Janvier</string>
+                                <string>Février</string>
+                                <string>Avril</string>
+                                <string>Mars</string>
+                                <string>Mai</string>
+                                <string>Juin</string>
+                                <string>Juillet</string>
+                                <string>Aout</string>
+                                <string>Septembre</string>
+                                <string>Octobre</string>
+                                <string>Novembre</string>
+                                <string>Décembre</string>
+                            </objectValues>
+                        </comboBoxCell>
+                    </comboBox>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARN-Ld-7eZ">
+                        <rect key="frame" x="611" y="203" width="111" height="32"/>
+                        <buttonCell key="cell" type="push" title="Rechercher" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ufa-v2-fwM">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="searchData:" target="-2" id="ezO-A3-LyR"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-x8E"/>
             </connections>
-            <point key="canvasLocation" x="233.5" y="233"/>
+            <point key="canvasLocation" x="566.5" y="315"/>
         </window>
-        <arrayController objectClassName="Employe" id="eTJ-ds-HMN">
+        <arrayController objectClassName="Employe" id="eTJ-ds-HMN" userLabel="Employes">
             <declaredKeys>
                 <string>nom</string>
                 <string>prenom</string>
@@ -412,6 +563,11 @@ CA
             </declaredKeys>
             <connections>
                 <binding destination="-2" name="contentArray" keyPath="employes" id="uoh-XZ-oSn"/>
+            </connections>
+        </arrayController>
+        <arrayController mode="entity" entityName="Heures" automaticallyPreparesContent="YES" id="ozV-wi-50e" userLabel="Heures">
+            <connections>
+                <binding destination="-2" name="managedObjectContext" keyPath="managedObjectContext" id="y32-d8-k3E"/>
             </connections>
         </arrayController>
         <userDefaultsController representsSharedInstance="YES" id="drO-lg-vd0"/>

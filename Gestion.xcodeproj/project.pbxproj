@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083D35EA19EAE0C8003F3EE8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08754B2C19D8088200C375A0 /* CoreData.framework */; };
 		08754B2919D8088200C375A0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08754B2819D8088200C375A0 /* Cocoa.framework */; };
 		08754B3319D8088200C375A0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08754B3119D8088200C375A0 /* InfoPlist.strings */; };
 		08754B3519D8088200C375A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08754B3419D8088200C375A0 /* main.m */; };
@@ -62,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				083D35EA19EAE0C8003F3EE8 /* CoreData.framework in Frameworks */,
 				08754B2919D8088200C375A0 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +486,7 @@
 				08754B5B19D8088200C375A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08754B5C19D8088200C375A0 /* Build configuration list for PBXNativeTarget "GestionTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +495,7 @@
 				08754B5E19D8088200C375A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
